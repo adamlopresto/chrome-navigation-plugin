@@ -1,9 +1,9 @@
 {
-  "name": "Navigation Shortcuts",
+  "name": "My version of Navigation Shortcuts",
   "version": "2017.8.30",
   "manifest_version": 2,
   "description": "Allows next, up, prev, and top links to be used with simple keyboard shortcuts.",
-  "permissions": ["history"],
+  "permissions": ["history", "http://*/*", "https://*/*", "tabs" ],
   "content_scripts": [
     {
       "matches": [

@@ -171,12 +171,19 @@ function keyListener(e){
 
 	// Key + Left
 	if(cmdKey && !e.shiftKey && e.keyCode == 37 && destinations.prev){
-		action = "prev"
-	}
+            action = "prev";
+        }
 
 	// Key + Right
-	if(cmdKey && !e.shiftKey && e.keyCode == 39 && destinations.next){
+	if(cmdKey && !e.shiftKey && e.keyCode == 39){
+            var sel = window.getSelection().toString();
+            if (sel != "") {
+                window.open("https://www.google.com/search?q="+sel, '_blank');
+                return;
+            }
+            else if (destinations.next){
 		action = "next"
+            }
 	}
 
 	// Key + Up
